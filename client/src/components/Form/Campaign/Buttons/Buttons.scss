@@ -1,0 +1,16 @@
+.buttons {
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+      width: calc(100% - 120px);
+    }
+
+    button {
+      width: 100px;
+    }
+  }
+}

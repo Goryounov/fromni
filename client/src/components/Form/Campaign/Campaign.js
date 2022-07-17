@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
-import Message from "../Message/Message";
-import Keyboard from "../Keyboard/Keyboard";
-import Buttons from "../Buttons/Buttons";
-import {Context} from "../../index";
+import Message from "./Message/Message";
+import Keyboard from "./Keyboard/Keyboard";
+import Buttons from "./Buttons/Buttons";
+import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
-import CampaignControls from "./CampaignControls/CampaignControls";
+import Controls from "./Controls/Controls";
 
 const Campaign = () => {
     const {store} = useContext(Context);
@@ -19,7 +19,7 @@ const Campaign = () => {
             {store.keyboard.type !== 'none' &&
             <Buttons/>
             }
-            <CampaignControls/>
+            <Controls/>
         </div>
     );
 };

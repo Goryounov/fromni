@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
-import './FormChannelsButtons.scss';
+import './ChannelsButtons.scss';
 
-const FormChannelsButtons = () => {
+const ChannelsButtons = () => {
     const {store} = useContext(Context);
 
     function handleClick(name, channelId, validation) {
@@ -11,13 +11,13 @@ const FormChannelsButtons = () => {
     }
 
     return (
-        <div className={'form-channels-buttons form-group'}>
+        <div className={'channels-buttons form-group'}>
             {store.channels.map((channel, index) => {
                 return (
                     <button
                         key={index}
                         disabled={channel.added || (store.isFilling && !(channel.name === store.campaign.name))}
-                        className={channel.added ? 'form-channels-buttons__btn btn btn-outline-primary' : 'form-channels-buttons__btn btn btn-primary'}
+                        className={channel.added ? 'channels-buttons__btn btn btn-outline-primary' : 'channels-buttons__btn btn btn-primary'}
                         value={channel.name}
                         onClick={e => {handleClick(channel.name, channel.channelId, channel.validation)}}
                     >
@@ -30,4 +30,4 @@ const FormChannelsButtons = () => {
     );
 };
 
-export default observer(FormChannelsButtons);
+export default observer(ChannelsButtons);

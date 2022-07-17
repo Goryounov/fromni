@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import Errors from "../Errors/Errors";
-import {Context} from "../../index";
+import Errors from "../../../Errors/Errors";
+import {Context} from "../../../../index";
 import {observer} from "mobx-react-lite";
-import useInput from "../../hooks/useInput";
+import useInput from "../../../../hooks/useInput";
 
 const Message = () => {
     const {store} = useContext(Context);

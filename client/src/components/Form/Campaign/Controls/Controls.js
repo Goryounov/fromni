@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
-import {Context} from "../../../index";
-import './CampaignControls.scss';
+import {Context} from "../../../../index";
+import './Controls.scss';
 
-const CampaignControls = () => {
+const Controls = () => {
     const {store} = useContext(Context);
 
     function handleReset() {
-        store.resetForm();
+        store.deleteForm();
     }
 
     function handleSubmit() {
@@ -27,4 +27,4 @@ const CampaignControls = () => {
     );
 };
 
-export default observer(CampaignControls);
+export default observer(Controls);

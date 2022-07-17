@@ -17,22 +17,8 @@
     margin: 0 auto;
     width: 300px;
   }
+}
 
-  &-group {
-    margin: 0 0 20px 0;
-  }
-
-  &__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    input {
-      width: calc(100% - 120px);
-    }
-
-    button {
-      width: 100px;
-    }
-  }
+.form-group {
+  margin: 0 0 20px 0;
 }

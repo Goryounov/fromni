@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import profilesService from "../../services/profiles.service";
-import Campaign from "../Campaign/Campaign";
+import Campaign from "./Campaign/Campaign";
 import {Context} from "../../index";
 import {observer} from "mobx-react-lite";
 import './Form.scss';
-import FormChannelsButtons from "./FormChannelsButtons/FormChannelsButtons";
+import ChannelsButtons from "./ChannelsButtons/ChannelsButtons";
 
 const Form = () => {
     const {store} = useContext(Context);
@@ -20,7 +20,7 @@ const Form = () => {
         <div className={'form card'}>
             <div className='card-body'>
                 <h1 className={'form__title h1'}>Форма</h1>
-                <FormChannelsButtons/>
+                <ChannelsButtons/>
                 {store.isFilling &&
                 <Campaign/>
                 }

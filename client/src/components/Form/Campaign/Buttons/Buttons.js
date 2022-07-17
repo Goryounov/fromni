@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import {Context} from "../../index";
+import {Context} from "../../../../index";
 import {observer} from "mobx-react-lite";
-import Errors from "../Errors/Errors";
-import useInput from "../../hooks/useInput";
+import Errors from "../../../Errors/Errors";
+import useInput from "../../../../hooks/useInput";
+import './Buttons.scss';
 
 const Buttons = () => {
     const {store} = useContext(Context);
@@ -59,7 +60,7 @@ const Buttons = () => {
             </div>
             <div className={'form-group align-items-center'}>
                 <Errors item={getCurrentButton()}/>
-                <div className={'form__row'}>
+                <div className={'buttons__row'}>
                     {!buttonsAmount(store.button.type, `${store.button.type}_buttons_max`)
                         ?
                         <>
