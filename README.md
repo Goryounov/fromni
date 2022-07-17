@@ -2,7 +2,7 @@
 
 ### Frontend
 ##### React
-##### React Axios listens to port 5000
+##### React sends requests to port 5000
 
 ### Backend
 ##### NestJS PostgreSQL
