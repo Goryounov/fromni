@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {Context} from "../index";
 
 const useValidation = (value, name, validations) => {
