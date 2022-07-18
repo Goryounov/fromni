@@ -1,17 +1,17 @@
 import React, {useContext} from 'react';
-import {Context} from "../../../index";
-import {observer} from "mobx-react-lite";
+import {Context} from '../../../index';
+import {observer} from 'mobx-react-lite';
 import './ChannelsButtons.scss';
 
 const ChannelsButtons = () => {
     const {store} = useContext(Context);
 
     function handleClick(name, channelId, validation) {
-        store.createCampaign(name, channelId, validation)
+        store.createCampaign(name, channelId, validation);
     }
 
     return (
-        <div className={'channels-buttons form-group'}>
+        <div className='channels-buttons form-group'>
             {store.channels.map((channel, index) => {
                 return (
                     <button

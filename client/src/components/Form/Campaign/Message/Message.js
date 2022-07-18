@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import Errors from "../../../Errors/Errors";
-import {Context} from "../../../../index";
-import {observer} from "mobx-react-lite";
-import useInput from "../../../../hooks/useInput";
+import Errors from '../../../Errors/Errors';
+import {Context} from '../../../../index';
+import {observer} from 'mobx-react-lite';
+import useInput from '../../../../hooks/useInput';
 
 const Message = () => {
     const {store} = useContext(Context);
@@ -10,15 +10,15 @@ const Message = () => {
 
     function handleChange(e) {
         message.onChange(e);
-        store.setMessage(e.target.value)
+        store.setMessage(e.target.value);
     }
 
     return (
         <>
             <Errors item={message}/>
-            <div className={'form-group'}>
+            <div className='form-group'>
             <textarea
-                className={'form-control'}
+                className='form-control'
                 value={store.message}
                 placeholder='Введите сообщение'
                 onChange={handleChange}
